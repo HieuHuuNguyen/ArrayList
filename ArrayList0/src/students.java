@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class students implements Comparable<students> {
-    private String rollno;
-    private String fullname;
-    private int DOB;
-    private float mark;
+    public String rollno;
+    public String fullname;
+    public int DOB;
+    public float mark;
 
     public students(String rollno) {
         this.rollno = rollno;
@@ -61,12 +61,23 @@ public class students implements Comparable<students> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(mark, fullname, fullname, DOB);
+        return Objects.hash(rollno, fullname, DOB, mark);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if(this == obj){
+            return true;
+        }
+        if(this == null){
+            return false;
+        }
+        if(getClass() != obj.getClass()){
+            return false;
+
+        }
+        students other = (students) obj;
+        return Objects.equals(rollno, other.rollno);
     }
 
     @Override

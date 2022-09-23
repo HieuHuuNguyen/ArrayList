@@ -33,14 +33,14 @@ public class Main {
                 case 6:
                     System.out.println("Nhập mã sinh viên: ");
                     rollno = scan.nextLine();
-                    students std0 = new students(rollno); stdList.checkStudentIsExit(std0);
+                    students std0 = new students(rollno);
                     System.out.println("Kiếm tra sinh viên có trong danh sách: "+stdList.checkStudentIsExit(std0));
                     break;
                 case 7:
                     System.out.println("Nhập mã sinh viên: ");
                     rollno = scan.nextLine();
-                    students std1 = new students(rollno); stdList.deleteStudent(std1);
-                    System.out.println("Xóa sinh viên trong danh sách: "+stdList.deleteStudent(std1));
+                    students students = new students(rollno);
+                    System.out.println("Xóa sinh viên trong danh sách: "+stdList.deleteStudent(students));
                     break;
                 case 8:
                     System.out.println("Nhập họ và tên: ");
